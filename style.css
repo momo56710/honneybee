@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/*font-family: 'Kumbh Sans', sans-serif;*/
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-vark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.ImgThumStyle {
+  display: none;
+}
+#hummenu {
+  display: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid var(--Grayish-blue);
+  padding-inline: 1em;
+}
+/*nav*/
+.NavCnt {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+  align-items: center;
+}
+
+.logo {
+  margin-block: auto;
+}
+
+.MainNav {
+  color: var(--Grayish-blue);
+  display: flex;
+  gap: 1.4em;
+}
+.MainNav li {
+  font-size: 1.2em;
+  position: relative;
+  transition: 500ms;
+}
+
+.MainNav li:hover {
+  color: var(--Very-vark-blue);
+}
+
+.MainNav li::after {
+  content: "";
+  position: absolute;
+  bottom: -2.3em;
+  left: 0;
+  background-color: var(--Orange);
+  height: 5px;
+  width: 0;
+  transition: 500ms;
+}
+
+.MainNav li:hover::after {
+  width: 100%;
+}
+/*cart and profile*/
+.CartProfile {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+/*small indicator of pieces amount*/
+.FullProductsAmount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: var(--Orange);
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+/*popup cart window*/
+.cart {
+  position: relative;
+}
+
+.PopUpWindow {
+  background: white;
+  width: 250px;
+  left: -180px;
+  top: 50px;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.PopUpWindow #Title {
+  padding: 1em 1em;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--Grayish-blue);
+}
+
+.ShopingListEmpty {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  color: var(--Grayish-blue);
+  font-weight: bold;
+}
+
+.productBuying {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 0 9px;
+}
+
+.productBuying .Title {
+  color: var(--Grayish-blue);
+  font-weight: bold;
+}
+
+.ShopingList .ProductDetails {
+  color: var(--Grayish-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.ShopingList .ProductDetails .AllPrice {
+  color: black;
+  font-weight: bold;
+}
+
+#checkout {
+  all: unset;
+  background: var(--Orange);
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  margin-inline: auto;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: var(--Pale-orange) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 500ms;
+}
+
+.CartProfile * {
+  margin-block: auto;
+}
+
+.profile {
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0ms;
+}
+
+.profile:hover {
+  border: 3px solid var(--Orange);
+}
+.navelmnt {
+  position: relative;
+  margin: 0 1.5em;
+}
+.navelmnt::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background: orange;
+  bottom: -2.7em;
+  left: 0;
+  transition: 500ms;
+}
+.navelmnt:hover::after {
+  width: 100%;
+}
+.lineStyleActive::after {
+  width: 100%;
+}
+.nav {
+  position: relative;
+  margin: auto;
+}
+.nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(59, 59, 59);
+  bottom: 0;
+  left: 0;
+}
+main{
+  margin-top: 5em;
+}
+.title {
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.Sellpage {
+  margin-block: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+/*product display*/
+.PhotosCnt {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.ImgPrdcts {
+  width: 25em;
+  aspect-ratio: 1;
+}
+#NrmlvwIP:hover {
+  cursor: pointer;
+}
+
+.ImgPrdct {
+  border-radius: 20px;
+}
+
+.ImgPrdctThums {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1em;
+}
+
+.ImgPrdctThums * {
+  height: 5em;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 500ms;
+}
+
+.ImgPrdctThums *:hover {
+  opacity: 0.6;
+}
+
+.slected {
+  opacity: 0.6;
+  border: 3px solid var(--Orange);
+}
+/*slideshow*/
+.Slide-Show {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SlideShowCnt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.SsImgPrdcts {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.previous,
+.next {
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.previous {
+  left: -25px;
+}
+
+.next {
+  right: -25px;
+}
+
+.SsImgPrdcts * {
+  cursor: pointer;
+}
+
+.ImgPrdctThums * {
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+/*information container*/
+.DtailsCnt {
+  width: 90%;
+  height: 100%;
+  display: grid;
+}
+
+#sneaker-company {
+  text-transform: uppercase;
+  color: var(--Orange);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#sneaker-name {
+  font-size: 3.2em;
+  font-weight: bold;
+}
+
+#sneaker-description {
+  color: var(--Dark-grayish-blue);
+}
+
+#new-price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#discount {
+  font-weight: bold;
+  color: var(--Orange);
+  background: var(--Pale-orange);
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#old-price {
+  font-weight: bold;
+  color: var(--Grayish-blue);
+  text-decoration: line-through;
+}
+
+.BuyingFase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  width: 100%;
+}
+
+.counter {
+  height: 50px;
+  padding: 0 1em;
+  border-radius: 10px;
+  background: var(--Light-grayish-blue);
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter * {
+  margin-block: auto;
+}
+
+#PiecesNum {
+  all: unset;
+  text-align: center;
+  width: 25px;
+}
+
+#AddToCart {
+  all: unset;
+  height: 50px;
+  background: var(--Orange);
+  width: 100%;
+  margin: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: var(--Pale-orange) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 500ms;
+}
+
+#AddToCart:hover {
+  opacity: 0.6;
+}
+
+#AddToCart span {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.footer {
+  background-image: url("images/Image-Slider_Andalou.png");
+  height: 8em;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fa812872;
+  z-index: 0;
+}
+.contentCnt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100px 3fr 1fr;
+  align-items: center;
+  padding: 2em;
+}
+ul {
+  list-style: none;
+  display: flex;
+  color: white;
+  justify-self: start;
+  gap: 2em;
+}
+.socialsAndCopyrights {
+  color: white;
+}
+.momo::after {
+  width: 100%;
+}
+.none {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 13px;
+  }
+  header {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .Sellpage {
+    display: flex;
+    flex-direction: column;
+  }
+  .DtailsCnt {
+    width: 90%;
+    margin: auto;
+  }
+  .Price {
+    width: fit-content;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .NewPriceAndDiscount {
+    display: inline;
+  }
+  #old-price {
+    width: fit-content;
+    justify-self: end;
+  }
+  .BuyingFase {
+    display: flex;
+    flex-direction: column;
+  }
+  #AddToCart {
+    height: 50px;
+    margin: 0;
+  }
+  .ImgPrdctThums {
+    display: none;
+  }
+  .ImgPrdcts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .ImgPrdct {
+    border-radius: 0;
+  }
+  .previous {
+    display: flex;
+    left: 10px;
+  }
+  .next {
+    display: flex;
+    right: 10px;
+  }
+  #NrmlvwIP:hover {
+    opacity: 1;
+  }
+  .MainNav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 50px;
+    background: white;
+    position: absolute;
+    left: -700px;
+    height: 100vh;
+    width: 60%;
+    transition: 600ms;
+  }
+  .Hummenu {
+    display: inline;
+  }
+  .NavCnt {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    align-items: center;
+  }
+  .CartProfile {
+    padding-right: 1.5em;
+  }
+  #hummenu {
+    display: inline;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .humnav {
+    top: 0;
+    left: 0;
+  }
+
+  #hamburger .line {
+    fill: none;
+    stroke: var(--Grayish-blue);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #hamburger .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+
+  #hamburger .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+
+  #hamburger .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+
+  #hamburger.open .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
+  #hamburger.open .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+
+  #hamburger.open .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .MainNav li {
+    color: black;
+  }
+  .MainNav li::after {
+    all: unset;
+  }
+  .footer {
+    height: fit-content;
+    padding: 2em;
+ 
+  }
+  .contentCnt {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 2em;
+    gap: 4em;
+    z-index: 2;
+    
+  }
+  ul {
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+    justify-self: start;
+    justify-items: center;
+    align-items: center;
+    gap: 2em;
+  }
+  .socials{
+    flex-direction: row;
+  }
+}

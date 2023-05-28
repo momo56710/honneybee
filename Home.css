@@ -1,0 +1,54 @@
+.sloganCnt {
+    background-image: url("images/Image-Slider_Andalou.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 15em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sloganCnt p {
+    font-family: "Nuevo Demo";
+    color: white;
+    font-size: 4em;
+  }
+  .storie{
+      width: 80%;
+      font-size: 1.3em;
+      margin: 4em auto;
+      font-family: 'khula';
+  }
+.quate{
+    width: 40%;
+    margin: 10em auto;
+    margin-bottom: 5em;
+    position: relative;
+}
+.quateup{
+    position: absolute;
+    left: -6em;
+    top: -5em;
+}
+.quatedown{
+    position: absolute;
+    right: -6em;
+    bottom: -5em;
+}
+.quate p{
+    font-family: 'Nuevo Demo';
+    font-weight: bold;
+    font-size: 2.3em;
+}
+@media only screen and (max-width: 500px){
+   main{
+    margin-top: 5em;
+   }
+   .sloganCnt {
+    text-align: center;
+  }
+   .quateup , .quatedown{
+    height: 5em;
+   }
+
+}

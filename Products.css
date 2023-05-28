@@ -1,0 +1,25 @@
+.productsShow {
+    height: calc(100vh - 10em);
+    width: 100%;
+    overflow-y: scroll;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, 300px);
+   
+  }
+  .prdct {
+    width: 250px;
+    height: 300px;
+    margin: 2em auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+@media only screen and (max-width: 1000px) {
+  .productsShow {
+    margin-top: 5em;
+  }}
