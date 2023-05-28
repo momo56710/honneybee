@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .sloganCnt {
     background-image: url("images/Image-Slider_Andalou.png");
     background-repeat: no-repeat;
@@ -9,7 +10,7 @@
     align-items: center;
   }
   .sloganCnt p {
-    font-family: "Nuevo Demo";
+    font-family: "roboto";
     color: white;
     font-size: 4em;
   }
@@ -36,7 +37,7 @@
     bottom: -5em;
 }
 .quate p{
-    font-family: 'Nuevo Demo';
+    font-family: 'roboto';
     font-weight: bold;
     font-size: 2.3em;
 }

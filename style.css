@@ -230,9 +230,6 @@ hr {
   bottom: 0;
   left: 0;
 }
-main{
-  margin-top: 5em;
-}
 .title {
   font-weight: bold;
   text-decoration: underline;
@@ -488,6 +485,9 @@ ul {
 @media only screen and (max-width: 1000px) {
   html {
     font-size: 13px;
+  }
+  main{
+    margin-top: 5em;
   }
   header {
     position: fixed;

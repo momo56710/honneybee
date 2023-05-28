@@ -17,8 +17,8 @@
     justify-items: center;
     align-items: center;
     font-weight: bold;
+    position: relative;
   }
-  
 @media only screen and (max-width: 1000px) {
   .productsShow {
     margin-top: 5em;
